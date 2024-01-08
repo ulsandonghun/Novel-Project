@@ -25,6 +25,7 @@ dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
 	implementation 'org.springframework.boot:spring-boot-starter-thymeleaf'
 	implementation 'org.springframework.boot:spring-boot-starter-web'
+	implementation 'org.jsoup:jsoup:1.15.3'
 	compileOnly 'org.projectlombok:lombok'
 	developmentOnly 'org.springframework.boot:spring-boot-devtools'
 	runtimeOnly 'com.mysql:mysql-connector-j'
@@ -34,4 +35,11 @@ dependencies {
 
 tasks.named('test') {
 	useJUnitPlatform()
+}
+
+
+
+//plain.jar 생성 중지
+jar{
+	enabled=false
 }
